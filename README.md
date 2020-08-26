@@ -39,16 +39,24 @@ Ideas
 
 ## Step 2
 
+NOTE: Commit to git early and often. Push to your personal repository often.
+
+Create your PR early as early as you can.
+
 Create an express api
 
 Create http files to test your api
 
 ## Step 3
 
+NOTE: Commit to git early and often. Push to your personal repository often, especially before each step.
+
 Create a react UI
 
 Create test files for your UI (more on this this week!)
 
 ## Step 4
+
+NOTE: Commit to git early and often. Push to your personal repository often, especially before each step.
 
 Deploy your app to the world (more on this this week!)
