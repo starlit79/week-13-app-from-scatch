@@ -18,6 +18,15 @@ Use the slide decks and the previous repositories as your help to complete the c
 
 Ask your group, any TAs, the instructor, etc for any help you need. We're in this together to all be full stack developers that can create any app we can dream of.
 
+## All Together
+
+Setup a personal mongodb in the cloud
+
+<https://mlab.com/>
+<https://www.mongodb.com/>
+<https://www.mongodb.com/cloud/atlas/signup>
+
+
 ## Instructions
 
 ### Step 1
