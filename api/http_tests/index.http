@@ -1,0 +1,6 @@
+### Test the home page endpoint
+
+GET http://localhost:9000
+
+### Test a 404
+GET http://localhost:9000/testing-404
