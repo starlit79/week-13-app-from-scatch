@@ -1,3 +1,33 @@
+Project Layout
+
+I have created a website already, tho just using wordpress and widgets. It's currently hosted at my friend's server
+
+https://capecod-getaway.com/
+
+Ultimately the following is my plan for the project using react, express and mySQL
+
+Home Page: Featured vacation home with descriptions and photo gallery.  Email address on the page
+Review page: Pulling data from mySQL with table of contacts of prior guests who stayed
+    1. Will show guest's first name and initial of last name
+    2. Town/state they are from
+    3. Month/Year they stayed
+    4. Review
+
+In mySQL
+Contacts table
+1. First Name
+2. Last Name
+3. Email Address
+4. Address of Town, State
+5. Phone number
+6. Month/Year they stayed
+6. Review
+
+
+
+
+1. user friendly front end interface
+
 # Create an App using Express and React from Scratch
 
 Let's goooooo!
