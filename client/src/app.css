@@ -1,0 +1,45 @@
+.App {
+    text-align: center;
+  }
+  
+  /* .table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse
+  }
+  
+  .table {
+    margin: 0 auto;
+    width: 85%
+  }
+  
+  thead {
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 6px;
+  }
+  
+  tr {
+    padding: 6px;
+  } */
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .h1{
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  

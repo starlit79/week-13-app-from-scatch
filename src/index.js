@@ -1,19 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'reactstrap'
+// This file is: ./src/index.js
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//importing the dependencies
+const {
+  app,
+  startDatabase
+} = require('./app-common.js')
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// endpoint to return top level api
+// much like a switch statement
+app.get('/', async (req, res) => {
+  res.send({
+    message: "Home page"
+  });
+});
+
+app.use('/contacts', require('./routes/contactsRoutes'))
+
+// connect to our database
+// https://www.mongodb.com/
+startDatabase().then(async () => {
+  // `then` start the web server after the database starts
+  app.listen(3001, async () => {
+    console.log('Web server has started on port 3001 http://localhost:3001');
+  });
+});

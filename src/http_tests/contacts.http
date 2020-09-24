@@ -1,0 +1,32 @@
+### Test the home page endpoint
+
+GET http://localhost:3001/contacts
+
+### Test creating a product
+POST http://localhost:3001/contacts
+Content-Type: application/json
+
+{
+  "first": "Sharon",
+  "last": "Lin",
+  "address": "Arlington, MA",
+  "visited": "July, 2020",
+  "review": "Nice spacious place",
+  "email": "capecodgetaway10@gmail.com"
+}
+
+### Test the PUT which should change a product
+### id of 5f2b54de320478eb4b1603eb is temporary while server is running
+PUT http://localhost:3001/contacts/
+Content-Type: application/json
+
+{
+  "review": "Enjoyed our stay"
+}
+
+###
+DELETE http://localhost:3001/contacts/5f6bf2bb58d62e1cdcfbf4c1
+
+
+
+

@@ -13,7 +13,7 @@ Review page: Pulling data from mySQL with table of contacts of prior guests who 
     3. Month/Year they stayed
     4. Review
 
-In mySQL
+In MongoDB
 Contacts table
 1. First Name
 2. Last Name

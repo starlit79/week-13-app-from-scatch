@@ -1,4 +1,4 @@
-const {getDatabase} = require('../../mongo-common');
+const {getDatabase} = require('./mongo-common');
 // https://docs.mongodb.com/manual/reference/method/ObjectId/
 const {ObjectID} = require('mongodb');
 
