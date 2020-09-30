@@ -1,27 +1,169 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Carousel,
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption
-} from 'reactstrap';
+  CarouselCaption,
+} from "reactstrap";
 
 const items = [
   {
-    src: '/images/back yard.png',
-    caption: 'Back Yard 1'
+    src: "/images/outside2.png",
+    caption: "Front of the House"
   },
   {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    src: "/images/outside 1.png",
+    caption: "Front of the House View 2"
   },
   {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
-  }
+    src: "/images/living room 1.png",
+    caption: "Living Room"
+  },
+  {
+    src: "/images/living room2.png",
+    caption: "Living Room View 2"
+  },
+  {
+    src: "/images/living room 3.png",
+    caption: "Living Room View 3"
+  },
+  {
+    src: "/images/kitchin1.png",
+    caption: "Kitchen View 1"
+  },
+  {
+    src: "/images/kitchen2.png",
+    caption: "Kitchen View 2"
+  },
+  {
+    src: "/images/kitchen 3.png",
+    caption: "Kitchen View 3"
+  },
+  {
+    src: "/images/bedroom 1a.png",
+    caption: "Bedroom #1 View 1"
+  },
+  {
+    src: "/images/bedroom 1b.png",
+    caption: "Bedroom #1 View 2"
+  },
+  {
+    src: "/images/bedroom1.png",
+    caption: "Queen Bedroom #1 View 3"
+  },
+  {
+    src: "/images/bedroom2.png",
+    caption: "Queen Bedroom #2 View 1"
+  },
+  {
+    src: "/images/bedroom2a.png",
+    caption: "Queen Bedroom #2 View 2"
+  },
+  {
+    src: "/images/bedroom5.png",
+    caption: "Queen Bed In Family Room View 1"
+  },
+  {
+    src: "/images/bedroom5a.png",
+    caption: "Queen Bed In Family Room View 2"
+  },
+  {
+    src: "/images/bedroom3.png",
+    caption: "Two Set Twindle Bedroom (Four twins)"
+  },
+  {
+    src: "/images/bedroom4a.png",
+    caption: "One Set Twindle Bedroom (Two twins)"
+  },
+  {
+    src: "/images/bedroom4b.png",
+    caption: "One Set Twindle Bedroom (Two twins)"
+  },
+
+  {
+    src: "/images/kitchen 3.png",
+    caption: "Kitchen View 3"
+  },
+  {
+    src: "/images/kitchen 3.png",
+    caption: "Kitchen View 3"
+  },
+  {
+    src: "/images/kitchen 3.png",
+    caption: "Kitchen View 3"
+  },
+  {
+    src: "/images/dining room1.png",
+    caption: "Dining Room View 1"
+  }, {
+    src: "/images/dining room2.png",
+    caption: "Dining Room View 2"
+  },
+  {
+    src: "/images/bathroom1.png",
+    caption: "Bathroom #1 With Laundry View 1"
+  },
+  {
+    src: "/images/bathroom1a.png",
+    caption: "Bathroom #1 View 2"
+  },
+  {
+    src: "/images/bathroom2.png",
+    caption: "Bathroom #2 View 1"
+  },
+  {
+    src: "/images/bathroom2a.png",
+    caption: "Bathroom #2 View 2"
+  },
+  {
+    src: "/images/bathroom2c.png",
+    caption: "Bathroom #2 View 3"
+  },
+  {
+    src: "/images/playpen.png",
+    caption: "Playpen Available"
+  },
+  {
+    src: "/images/deck with light.png",
+    caption: "Deck At Night With Lighting"
+  },
+  {
+    src: "/images/deck.png",
+    caption: "Deck During The Day"
+  },
+  {
+    src: "/images/back yard.png",
+    caption: "Back Yard View 1"
+  },
+  {
+    src: "/images/backyard2.png",
+    caption: "Back Yard View 2"
+  },
+  {
+    src: "/images/backyard3.png",
+    caption: "Back Yard View 3"
+  },
+  {
+    src: "/images/pirate's cove.png",
+    caption: "Pirate's Cove"
+  },
+  {
+    src: "/images/redface jack.png",
+    caption: "Redface jack"
+  },
+  {
+    src: "/images/mike's.png",
+    caption: "Mike's"
+  },
+  {
+    src: "/images/seagull beach.png",
+    caption: "Seagull Beach View 1"
+  },
+  {
+    src: "/images/seagull beach2.png",
+    caption: "Seagull Beach View 2"
+  },
 ];
 
 const Gallery = (props) => {
@@ -32,18 +174,18 @@ const Gallery = (props) => {
     if (animating) return;
     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
-  }
+  };
 
   const previous = () => {
     if (animating) return;
     const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
-  }
+  };
 
   const goToIndex = (newIndex) => {
     if (animating) return;
     setActiveIndex(newIndex);
-  }
+  };
 
   const slides = items.map((item) => {
     return (
@@ -53,23 +195,34 @@ const Gallery = (props) => {
         key={item.src}
       >
         <img src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        <CarouselCaption
+          captionText={item.caption}
+          captionHeader={item.caption}
+        />
       </CarouselItem>
     );
   });
 
   return (
-    <Carousel
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-    >
-      <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+    <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+      <CarouselIndicators
+        items={items}
+        activeIndex={activeIndex}
+        onClickHandler={goToIndex}
+      />
       {slides}
-      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+      <CarouselControl
+        direction="prev"
+        directionText="Previous"
+        onClickHandler={previous}
+      />
+      <CarouselControl
+        direction="next"
+        directionText="Next"
+        onClickHandler={next}
+      />
     </Carousel>
   );
-}
+};
 
 export default Gallery;
